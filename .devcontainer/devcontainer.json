@@ -19,17 +19,16 @@
 	// "postCreateCommand": "R -q -e 'install.packages(\"tidyverse\")'",
 	// Configure tool-specific properties.
 	"customizations": {
-  // vscode extensions to install into container
+		// vscode extensions to install into container
 		"vscode": {
 			"extensions": [
-				"mblode.zotero",
 				"Posit.air-vscode",
 				"quarto.quarto",
 				"RDebugger.r-debugger",
 				"REditorSupport.r-syntax",
 				"REditorSupport.r",
 			],
-		// Settings for VS Code.
+			// Settings for VS Code.
 			"settings": {
 				"r.rterm.linux": "/usr/local/bin/radian",
 				"r.bracketedPaste": true,
