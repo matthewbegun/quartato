@@ -9,7 +9,7 @@ number-depth: 3
 documentclass: article
 # bibliography: references.bib
 # csl: ipag-business-school-apa.csl
-# format: pdf
+format: pdf
 ---
 
 # heading 1
