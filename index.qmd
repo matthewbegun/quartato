@@ -1,0 +1,13 @@
+---
+title: "The thing that I am writing"
+# subtitle: "... Research Proposal"
+date: today
+toc: true
+toc-title: Contents
+number-sections: true
+number-depth: 3
+documentclass: article
+# bibliography: references.bib
+# csl: ipag-business-school-apa.csl
+# format: pdf
+---
