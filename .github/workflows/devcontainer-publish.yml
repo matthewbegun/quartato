@@ -1,0 +1,31 @@
+name: DevContainer Prebuild and Publish to GHCR
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    permissions:
+      packages: write
+      contents: read
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+      
+    - name: Login to GitHub Container Registry
+      uses: docker/login-action@v2
+      with:
+        registry: ghcr.io
+        username: ${{ secrets.GITHUB_ACTOR }}
+        password: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Build and Push DevContainer Image
+      uses: devcontainers/ci@v0.6.1
+      with:
+        image-hub-name: ghcr.io/matthewbegn/quartato:latest
+        push-image: true
