@@ -4,6 +4,11 @@ on:
   push:
     branches:
       - main
+    paths:
+      - .devcontainer/**
+  pull_request:
+    paths:
+      - .devcontainer/**
   workflow_dispatch:
 
 permissions:
